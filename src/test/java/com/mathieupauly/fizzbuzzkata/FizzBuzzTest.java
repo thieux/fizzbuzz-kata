@@ -11,6 +11,11 @@ public class FizzBuzzTest {
     }
 
     @Test
+    public void two() {
+        assertEquals("2", fizzBuzz(2));
+    }
+
+    @Test
     public void three() {
         assertEquals("Fizz", fizzBuzz(3));
     }
