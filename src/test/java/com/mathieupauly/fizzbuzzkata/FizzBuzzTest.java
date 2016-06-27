@@ -16,6 +16,9 @@ public class FizzBuzzTest {
     }
 
     private String fizzBuzz(int n) {
+        if (n % 3 == 0) {
+            return "Fizz";
+        }
         return "1";
     }
 
