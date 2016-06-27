@@ -10,6 +10,11 @@ public class FizzBuzzTest {
         assertEquals("1", fizzBuzz(1));
     }
 
+    @Test
+    public void three() {
+        assertEquals("Fizz", fizzBuzz(3));
+    }
+
     private String fizzBuzz(int n) {
         return "1";
     }
