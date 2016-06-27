@@ -32,11 +32,7 @@ public class FizzBuzzTest {
 
     @Test
     public void show_1_100() {
-        StringBuilder buffer = new StringBuilder();
-        for (int n = 1; n <= 100; n++) {
-            buffer.append(fizzBuzz(n));
-            buffer.append("\n");
-        }
+        String actual = listFizzBuzz();
 
         assertEquals("1\n" +
                 "2\n" +
@@ -137,7 +133,16 @@ public class FizzBuzzTest {
                 "97\n" +
                 "98\n" +
                 "Fizz\n" +
-                "Buzz\n", buffer.toString());
+                "Buzz\n", actual);
+    }
+
+    private String listFizzBuzz() {
+        StringBuilder buffer = new StringBuilder();
+        for (int n = 1; n <= 100; n++) {
+            buffer.append(fizzBuzz(n));
+            buffer.append("\n");
+        }
+        return buffer.toString();
     }
 
     private String fizzBuzz(int n) {
