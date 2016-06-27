@@ -26,16 +26,19 @@ public class FizzBuzzTest {
     }
 
     private String fizzBuzz(int n) {
+        String text;
+
         if (n % 3 == 0 && n % 5 == 0) {
-            return "Fizz" + "Buzz";
+            text = "Fizz" + "Buzz";
+        } else if (n % 5 == 0) {
+            text = "Buzz";
+        } else if (n % 3 == 0) {
+            text = "Fizz";
+        } else {
+            text = "1";
         }
-        if (n % 5 == 0) {
-            return "Buzz";
-        }
-        if (n % 3 == 0) {
-            return "Fizz";
-        }
-        return "1";
+
+        return text;
     }
 
 
