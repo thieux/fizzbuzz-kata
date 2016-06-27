@@ -15,6 +15,11 @@ public class FizzBuzzTest {
         assertEquals("Fizz", fizzBuzz(3));
     }
 
+    @Test
+    public void five() {
+        assertEquals("Buzz", fizzBuzz(5));
+    }
+
     private String fizzBuzz(int n) {
         if (n % 3 == 0) {
             return "Fizz";
