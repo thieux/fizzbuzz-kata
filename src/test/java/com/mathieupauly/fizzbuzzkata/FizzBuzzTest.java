@@ -27,7 +27,7 @@ public class FizzBuzzTest {
 
     private String fizzBuzz(int n) {
         if (n % 3 == 0 && n % 5 == 0) {
-            return "FizzBuzz";
+            return "Fizz" + "Buzz";
         }
         if (n % 5 == 0) {
             return "Buzz";
