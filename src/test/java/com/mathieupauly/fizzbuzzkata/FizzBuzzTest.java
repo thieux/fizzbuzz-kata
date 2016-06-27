@@ -168,11 +168,8 @@ public class FizzBuzzTest {
             array[n - 1] = "Fizz";
         }
         for (int n = 5; n <= 100; n += 5) {
-            if (array[n - 1] != null) {
-                array[n - 1] += "Buzz";
-            } else {
-                array[n - 1] = "Buzz";
-            }
+            boolean fizz = array[n - 1] != null;
+            array[n - 1] = (fizz ? array[n - 1] : "") + "Buzz";
         }
 
         StringBuilder buffer = new StringBuilder();
