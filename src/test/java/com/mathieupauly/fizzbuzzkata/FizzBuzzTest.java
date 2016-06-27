@@ -134,20 +134,36 @@ public class FizzBuzzTest {
 
     @Test
     public void show_1_100_modulo() {
-        String actual = listFizzBuzz();
+        String actual = listFizzBuzz(100);
 
         assertEquals(EXPECTED, actual);
     }
 
     @Test
     public void show_1_100_for() {
-        String actual = listFizzBuzzFor();
+        String actual = listFizzBuzzFor(100);
 
         assertEquals(EXPECTED, actual);
     }
 
-    private String listFizzBuzzFor() {
-        String[] array = new String[100];
+    /**
+     * Execution time: ~1ms
+     */
+    @Test
+    public void benchmark_modulo() {
+        listFizzBuzz(100000);
+    }
+
+    /**
+     * Execution time: ~50ms
+     */
+    @Test
+    public void benchmark_for() {
+        listFizzBuzzFor(100000);
+    }
+
+    private String listFizzBuzzFor(int max) {
+        String[] array = new String[max];
         for (int n = 3; n <= 100; n += 3) {
             array[n - 1] = "Fizz";
         }
@@ -167,9 +183,9 @@ public class FizzBuzzTest {
         return buffer.toString();
     }
 
-    private String listFizzBuzz() {
+    private String listFizzBuzz(int max) {
         StringBuilder buffer = new StringBuilder();
-        for (int n = 1; n <= 100; n++) {
+        for (int n = 1; n <= max; n++) {
             buffer.append(fizzBuzz(n));
             buffer.append("\n");
         }
