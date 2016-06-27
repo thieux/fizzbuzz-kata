@@ -45,7 +45,7 @@ public class FizzBuzzTest {
         }
 
         if (!replace) {
-            text = "1";
+            text = String.valueOf(n);
         }
 
         return text;
