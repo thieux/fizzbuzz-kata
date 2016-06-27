@@ -30,6 +30,13 @@ public class FizzBuzzTest {
         assertEquals("FizzBuzz", fizzBuzz(15));
     }
 
+    @Test
+    public void show_1_100() {
+        for (int n = 1; n <= 100; n++) {
+            System.out.println(fizzBuzz(n));
+        }
+    }
+
     private String fizzBuzz(int n) {
         String text = "";
         boolean replace = false;
