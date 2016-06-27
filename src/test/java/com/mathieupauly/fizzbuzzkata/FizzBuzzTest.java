@@ -26,15 +26,20 @@ public class FizzBuzzTest {
     }
 
     private String fizzBuzz(int n) {
-        String text;
+        String text = "";
+        boolean replace = false;
 
-        if (n % 3 == 0 && n % 5 == 0) {
-            text = "Fizz" + "Buzz";
-        } else if (n % 5 == 0) {
-            text = "Buzz";
-        } else if (n % 3 == 0) {
+        if (n % 3 == 0) {
             text = "Fizz";
-        } else {
+            replace = true;
+        }
+
+        if (n % 5 == 0) {
+            text += "Buzz";
+            replace = true;
+        }
+
+        if (!replace) {
             text = "1";
         }
 
